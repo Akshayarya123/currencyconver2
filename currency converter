@@ -1,0 +1,28 @@
+package javaprograms;
+
+import java.util.Scanner;
+
+public class CurrencyConverter2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Amount to be converted
+        System.out.print("Enter the amount to convert: ");
+        double amount = scanner.nextDouble();
+
+        // Input: Exchange rate (for example, 1 USD = 0.85 EUR)
+        System.out.print("Enter the exchange rate (from source to target currency): ");
+        double exchangeRate = scanner.nextDouble();
+
+        // Target currency symbol (for example, EUR for Euro)
+        String targetCurrencySymbol = "€";
+
+        // Conversion calculation
+        double convertedAmount = amount * exchangeRate;
+
+        // Output: Converted amount and target currency symbol
+        System.out.printf("Converted amount: %.2f %s%n", convertedAmount, targetCurrencySymbol);
+
+        scanner.close();
+    }
+}
